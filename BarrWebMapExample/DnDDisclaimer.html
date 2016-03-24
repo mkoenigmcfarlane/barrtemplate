@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Drag and Drop - Barr Web Map Example</title>
+        <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.10compact/js/esri/css/esri.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+	<style>
+	.content {
+    color: #00529b;
+	font-family: Century Gothic;   
+	font-weight: normal;
+    padding-left: 15px!important;
+	padding-bottom: 95px !important;
+	font-size: 18px;
+	
+}
+
+</style>
+    <body class="dbootstrap">
+        <div class="appHeader">
+            <div class="headerLogo"
+			title="Click Here to Open Barr's Homepage"><a href="http://www.barr.com" target=_blank>
+                <img alt="logo" src="images/logo.png" height="64" /></a>
+            </div>
+            <div class="headerTitle">
+                 Barr Web Map Example
+                <div class="subHeaderTitle">
+                    Drag and Drop Disclaimer/Help
+                </div>
+            </div>
+           
+        </div>
+		
+		 
+			<div style="background-image:url(https://www.barr.com/maps/barrwebmapexample/images/whole-bg2.jpg);
+			width:100%;height:100%; overflow:scroll;">
+			<div class="content"style="width:auto%;height:auto%;padding: 15px;" >
+			
+						<li><b>Drag and Drop Disclaimer:</b></li>
+                         The web mapping application you are viewing is rendered based on a projection that uses the WGS84 geographic coordinate system.  Alignment and accuracy issues can occur when dragging spatial files into the application with a different datum, such as NAD83 or NAD27.  To avoid alignment issues associated with differing systems, please consider applying the appropriate transformation(s) to the file in a GIS desktop application prior to using the drag and drop tool.    </br>
+						  
+						</br>
+                       <li><b>Compatible File Types:</b></li> 					   
+					   <dd><li>CSV (must have coordinates)</li>
+					   <li>Shapefile (Below are best practices for using shapefiles in the map viewer)</li>
+					   <dd><dl><dd><li>Create a .zip file that contains the .shp, .shx, .dbf, and .prj files that comprise the shapefile.</li>
+					  <li>Store your shapefile directly in the root (the central directory) of the .zip archive and not in directories within the archive. If your .zip file viewer shows path information, the path should be blank.</li>
+					  <li>Add standard compressed archive .zip files.</li>
+					  <li>Include no more than 1,000 shapefile features in your file.</li>
+					  <li>Include in the shapefile the accompanying .prj file in which the coordinate system of the data is defined. If you have ArcGIS for Desktop, you can define the coordinate system of a shapefile, which creates an appropriate .prj file for the shapefile.</li></br>
+					  <u> Shapefile Limitations:</u>
+					  <dd><li>Compression formats other than a .zip archive are not supported.</li>
+					  <li>Files containing more than 1,000 features cannot be added to a map.</li><li>The following features are not supported: multipatch or multipoint geometries, geometries that cross the dateline, or self-intersections in polygons. Shapefiles with these features cannot be added to a map.</li>
+					  <li>Shapefiles cannot be dragged directly onto the map viewer; you must use the Add button in the map viewer.</li></dd></br>
+					  <li>Text (highlight url and drag-and-drop)</li>
+					  <dd><li>MapServer</li>
+					  <li>MapServer Layer</li>
+					  <li>ImageServer</li></dd></br></dd>
+					  
+					  <li><b>Instructions:</b></li> 	
+					  <dd><li>Drag and drop a CSV, zipped Shapefile, or supported URL to the map frame or the Drag and Drop tool in the left toolbar to display geographic features on the map.</li>
+					  <li>Alternatively, use the "choose file" tool to browse to desired file and click the "Add" button to add data to the map.</li>
+					  
+					  
+					  
+					  
+					  
+					  
+					   
+			
+						
+						   					
+                        
+                    </ul>
+						
+                        <div>
+                         
+                        </div>
+                    </ul>
+                </div>
+				</div>
+
+  
+   
+	
+		
+		
+		
+     
+
+    </body>
+</html>

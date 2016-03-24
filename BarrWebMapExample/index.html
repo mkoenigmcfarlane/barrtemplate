@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	
+		<!--<META HTTP-EQUIV="Pragma" CONTENT="no-cache"> <!--prevents caching of page-->
+		<!--<META HTTP-EQUIV="Expires" CONTENT="-1"> <!--not sure -->
+		<!--<meta http-equiv="refresh" content="3" refresh page every 3 seconds>--->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Barr Web Map Example</title>
+        <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13compact/esri/css/esri.css">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/theme/dbootstrap/dbootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+		
+		<!--Script to refresh site after initial load - mst2 -->
+		<!--<script type="text/javascript">
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+</script>-->
+
+		
+		<!-- Go to www.addthis.com/dashboard to customize your tools -->
+		<!-- code to insert Add This Charing tools - MST2-->
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-547e2b2662e08e6c" async="async"></script>
+
+		<!--code for Google Analytics hit counter - MST2-->
+		<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-55357769-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>	
+
+    </head>
+    <body class="dbootstrap">
+        <div class="appHeader">
+            <div class="headerLogo"
+			title="Click Here to Open Barr's Homepage"><a href="http://www.barr.com" target=_blank>
+                <img alt="logo" src="images/logo.png" height="64" /></a>
+            </div>
+            <div class="headerTitle">
+                Barr Web Map Example
+                <div class="subHeaderTitle">
+                    Corridor Study
+                </div>
+            </div>
+            <div class="search">
+                <div id='geocodeDijit'>
+                </div>
+            </div>
+            <div class="headerLinks">
+                <div id="helpDijit">
+                </div>
+            </div>
+			<!--added small help link that becomes active on small devices or small window and links to phoneHelp.html - MST2 -->
+			<div class="smallHelp">
+			<a href="phoneHelp.html" target=_blank>Help</a>
+			</div>
+			<!--added learn more - use this as a hyperlink as needed - MST2 -->
+			<div class="moreInfo">
+			<a href="LearnMore.html" target=_blank>Learn More</a>
+			</div>
+			<!--added data info - use this as a hyperlink as needed - MST2 -->
+			<div class="dataInfo">
+			<a href="DataInfo.html" target=_blank>About Data</a>
+			</div>
+			<!-- Go to www.addthis.com/dashboard to customize your tools - this is the DIV for the AddThis sharing tools - MST2 -->
+			<div class="addthis_sharing_toolbox"></div>  	
+		</div>
+		</div>
+	</div>
+
+		
+		
+		
+        <script type="text/javascript">
+            var dojoConfig = {
+                async: true,
+                packages: [{
+                    name: 'viewer',
+                    location: location.pathname.replace(/[^\/]+$/, '') + 'js/viewer'
+                },{
+                    name: 'config',
+                    location: location.pathname.replace(/[^\/]+$/, '') + 'js/config'
+                },{
+                    name: 'gis',
+                    location: location.pathname.replace(/[^\/]+$/, '') + 'js/gis'
+                }]
+            };
+			
+	
+        </script>
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="//js.arcgis.com/3.13compact/"></script>
+        <script type="text/javascript">
+            // get the config file from the url if present
+            var file = 'config/viewer', s = window.location.search, q = s.match(/config=([^&]*)/i);
+            if (q && q.length > 0) {
+                file = q[1];
+                if(file.indexOf('/') < 0) {
+                    file = 'config/' + file;
+                }
+            }
+            require(['viewer/Controller', file], function(Controller, config){
+                Controller.startup(config);
+            });
+        </script>
+    </body>
+</html>
