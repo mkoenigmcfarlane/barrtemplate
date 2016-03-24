@@ -1,9 +1,0 @@
-Barr Web Map Example 
-Version 3.0
-Release Date 1/27/2015
-Contact: Matt Taran (MST2)
-email: mtaran@barr.com
-
-
-Updated to JSAPI 3.13 and CMV ver 1.3.3 on 4/16/2015
-	Added metadata and data dowload tools to layer control
